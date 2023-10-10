@@ -8,6 +8,11 @@ rails db:create db:migrate db:seed
 
 To test the application, there is a test.http file in the root directory that can be used to call the apis
 
+Admin user to be used to login and created other users:
+
+Username: abdullahnegm
+Password: 123
+
 
 
 Schema:
