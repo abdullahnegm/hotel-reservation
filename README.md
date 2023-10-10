@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run the application, run the following commands in the application root
 
-Things you may want to cover:
+bundle i
+rails db:create db:migrate db:seed
 
-* Ruby version
+To test the application, there is a test.http file in the root directory that can be used to call the apis
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+Schema:
 
-* Database initialization
+User:
+name                 String
+username             String
+password             String
+password_digest      String
+phone_number         String
+ssn                  String
+admin                Boolean
 
-* How to run the test suite
+Room:
+number               INT
+price                Decimal   precision: 16   scale: 2
+room_type            INT
+floor_number         INT
 
-* Services (job queues, cache servers, search engines, etc.)
+Reservation:
+room_id              BigInt
+user_id              BigInt
+date_from            Date
+date_to              Date
 
-* Deployment instructions
-
-* ...
