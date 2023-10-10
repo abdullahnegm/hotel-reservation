@@ -1,0 +1,53 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "mon",
+    "password": "123" 
+}
+
+################################
+POST http://localhost:3000/admin/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjQ4NTI1MTE3NTF9.1q_tSnQEBNmzVsiVx0diYMwEJ7JwGt612SCK549Mnik
+
+{
+    "name": "Mona",
+    "username": "mon",
+    "password": "123",
+    "phone_number": "0103318121313",
+    "ssn": "123452671890",
+    "admin": false
+}
+
+################################
+POST http://localhost:3000/admin/rooms
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjQ4NTI1MTE3NTF9.1q_tSnQEBNmzVsiVx0diYMwEJ7JwGt612SCK549Mnik
+
+{
+    "number": 1,
+    "price": 100,
+    "room_type": 0,
+    "floor_number": 2
+}
+
+################################
+POST http://localhost:3000/user/reservations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjQ4NTI2MDczODh9.877urxmgmXohhI6BAgJOfgvGbescZ7sb1pX2WcNMpcY
+
+{
+    "room_id": 1,
+    "date_from": "2023-03-26",
+    "date_to": "2023-03-27"
+}
+
+################################
+DELETE http://localhost:3000/user/reservations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjQ4NTI2MDczODh9.877urxmgmXohhI6BAgJOfgvGbescZ7sb1pX2WcNMpcY
+
+{
+    "id": 1
+}
