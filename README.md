@@ -8,6 +8,8 @@ rails db:create db:migrate db:seed
 
 rails s
 
+----------------------------------------------
+----------------------------------------------
 
 To test the application, there is a test.http file in the root directory that can be used to call the apis
 
@@ -17,7 +19,8 @@ Username: abdullahnegm
 
 Password: 123
 
-
+----------------------------------------------
+----------------------------------------------
 
 Schema:
 
@@ -37,6 +40,8 @@ ssn                  String
 
 admin                Boolean
 
+----------------------------------------------
+----------------------------------------------
 
 Room:
 
@@ -48,7 +53,8 @@ room_type            INT
 
 floor_number         INT
 
-
+----------------------------------------------
+----------------------------------------------
 
 Reservation:
 
